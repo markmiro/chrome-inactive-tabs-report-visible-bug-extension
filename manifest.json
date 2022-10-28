@@ -1,0 +1,18 @@
+{
+  "name": "chrome-inactive-tabs-report-visible-bug-extension",
+  "manifest_version": 3,
+  "version": "1",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
